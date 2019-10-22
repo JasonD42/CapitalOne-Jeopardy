@@ -6,6 +6,10 @@ Endless jeopardy questions, practice games, and more can all be found here at th
 
 Find questions by date, category, difficulty, or specific topic 
 
+<?php
+echo "My first PHP script!";
+?>
+
 ```python
 
 int x = 5
