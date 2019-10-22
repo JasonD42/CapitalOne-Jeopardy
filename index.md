@@ -1,37 +1,28 @@
-## Welcome to GitHub Pages
+## Welcome to Jason's Jeopardy Dojo
 
-You can use the [editor on GitHub](https://github.com/JasonD42/CapitalOne-Jeopardy/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Endless jeopardy questions, practice games, and more can all be found here at the Dojo. Great for keeping your name sharp, so you're always ready for that true daily double.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Search for Questions
 
-### Markdown
+Find questions by date, category, difficulty, or specific topic 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+```python
 
-```markdown
-Syntax highlighted code block
+int x = 5
+print(x)
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Play a Game
 
-### Jekyll Themes
+Test your knowledge! 
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/JasonD42/CapitalOne-Jeopardy/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```python
 
-### Support or Contact
+import numpy as np
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+A = np.arange(10)
+
+print(A)
+
+```
