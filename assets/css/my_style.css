@@ -3,10 +3,6 @@
  *  css defined in the theme's source files.
  */
 
- header h1:before {
-    content: "";
- }
-
- header h1:before img {
-    display: block;
+ header h1::before {
+    content: url("../../img/buzzer.png");
  }
