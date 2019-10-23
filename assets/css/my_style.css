@@ -3,11 +3,3 @@
  *  css defined in the theme's source files.
  */
 
- header h1::before {
-    background-image: url("../../img/buzzer.png");
-    background-size: 10px 20px;
-    display: inline-block;
-    width: 10px; 
-    height: 20px;
-    content:"";
- }
