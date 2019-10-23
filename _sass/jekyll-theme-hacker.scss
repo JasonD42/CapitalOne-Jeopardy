@@ -10,11 +10,11 @@ $blockquote-border: $dove-grey !default;
 body {
   margin: 0;
   padding: 0;
-  background: $body-background url("../images/bkg.png") 0 0;
-  color: $body-foreground;
-  font-size: 16px;
-  line-height: 1.5;
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  background: $body-background url("../images/bkg.png") 0 0 !important;
+  color: $body-foreground !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace !important;
 }
 
 /* General & 'Reset' Stuff */
@@ -217,12 +217,12 @@ hr {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
-.btn:hover {
+.btn-github:hover {
   background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.6), rgba(35, 35, 35, 0.6) 50%, rgba(10, 10, 10, 0.8) 50%, rgba(0, 0, 0, 0.8));
   color: rgba(201, 201, 201, 0.8);
 }
 
-.btn .icon {
+.btn-github .icon {
   display: inline-block;
   width: 16px;
   height: 16px;
