@@ -1,0 +1,12 @@
+/*
+ *  File for customizing the css. This will override
+ *  css defined in the theme's source files.
+ */
+
+ header h1:before {
+    content: "";
+ }
+
+ header h1:before img {
+    display: block;
+ }
