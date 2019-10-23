@@ -55,7 +55,7 @@ header {
 header h1 {
   font-size: 30px;
   line-height: 1.5;
-  margin: 0 0 0 -40px;
+  margin: 0 0 0 0;
   font-weight: bold;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   color: $jeopardy-blue;//$header;
@@ -68,12 +68,13 @@ header h1 {
 
 // Buzzer image next to title
 header h1:before {
-  background-image: url("../../img/buzzer.png");
-  background-size: 10px 20px;
+  background-image: url(../../img/buzzer.png);
+  background-size: 30px 30px;
   display: inline-block;
-  width: 10px; 
-  height: 20px;
-  content:"";
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  content: "";
 }
 
 header h2 {
@@ -199,7 +200,7 @@ hr {
 /* Buttons
 */
 
-.btn {
+.btn-github {
   display: inline-block;
   background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.3), rgba(35, 35, 35, 0.3) 50%, rgba(10, 10, 10, 0.3) 50%, rgba(0, 0, 0, 0.3));
   padding: 8px 18px;
@@ -207,7 +208,7 @@ hr {
   border: 2px solid rgba(0, 0, 0, 0.7);
   border-bottom: 2px solid rgba(0, 0, 0, 0.7);
   border-top: 2px solid rgba(0, 0, 0, 1);
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(100, 100, 100, 0.8);
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-size: 13px;
@@ -218,6 +219,7 @@ hr {
 
 .btn:hover {
   background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.6), rgba(35, 35, 35, 0.6) 50%, rgba(10, 10, 10, 0.8) 50%, rgba(0, 0, 0, 0.8));
+  color: rgba(201, 201, 201, 0.8);
 }
 
 .btn .icon {
