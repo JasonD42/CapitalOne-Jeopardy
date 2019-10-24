@@ -1,4 +1,4 @@
-let elements = document.querySelectorAll('qfinder');
+let elements = document.getElementsByTagName('randq');
 
 for (let app of elements) {
 
