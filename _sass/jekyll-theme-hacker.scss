@@ -68,12 +68,6 @@ header h1 {
 
 // Buzzer image next to title
 header h1:before {
-  background-image: url(../../img/buzzer.png);
-  background-size: 30px 30px;
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
   content: "";
 }
 
