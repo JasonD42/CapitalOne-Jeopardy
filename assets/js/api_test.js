@@ -1,37 +1,41 @@
-const app = document.getElementById('qfinder')
+let elements = document.querySelectorAll('qfinder');
 
-const container = document.createElement('div')
-container.setAttribute('class', 'container')
+for (let app of elements) {
 
-app.appendChild(container)
+  const container = document.createElement('div')
+  container.setAttribute('class', 'container')
 
-var request = new XMLHttpRequest()
-request.open('GET', 'https://cors-anywhere.herokuapp.com/http://jservice.io/api/random', true)
-request.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-request.onload = function() {
-  // Begin accessing JSON data here
-  var data = JSON.parse(this.response)
-  if (request.status >= 200 && request.status < 400) {
-    data.forEach(jq => {
+  app.appendChild(container)
 
-      const qcard = document.createElement('div')
-      qcard.setAttribute('class', 'qcard')
+  var request = new XMLHttpRequest()
+  request.open('GET', 'https://cors-anywhere.herokuapp.com/http://jservice.io/api/random', true)
+  request.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+  request.onload = function() {
+    // Begin accessing JSON data here
+    var data = JSON.parse(this.response)
+    if (request.status >= 200 && request.status < 400) {
+      data.forEach(jq => {
 
-      const h4 = document.createElement('h4')
-      h4.textContent = jq.question
+        const qcard = document.createElement('div')
+        qcard.setAttribute('class', 'qcard')
 
-      const p = document.createElement('p')
-      p.textContent = jq.answer
+        const h4 = document.createElement('h4')
+        h4.textContent = jq.question
 
-      container.appendChild(qcard)
-      qcard.appendChild(h4)
-      qcard.appendChild(p)
-    })
-  } else {
-    const errorMessage = document.createElement('marquee')
-    errorMessage.textContent = `Gah, it's not working!`
-    app.appendChild(errorMessage)
+        const p = document.createElement('p')
+        p.textContent = jq.answer
+
+        container.appendChild(qcard)
+        qcard.appendChild(h4)
+        qcard.appendChild(p)
+      })
+    } else {
+      const errorMessage = document.createElement('marquee')
+      errorMessage.textContent = `Gah, it's not working!`
+      app.appendChild(errorMessage)
+    }
   }
+
+  request.send()
 }
 
-request.send()
