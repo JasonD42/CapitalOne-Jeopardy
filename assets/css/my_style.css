@@ -10,12 +10,9 @@
     color: whitesmoke;
 }
 
-.magic-button {
-    background-image: url(../../img/buzzer.png);
-    background-size: 30px 30px;
+img .magic-button {
     display: inline-block;
     width: 30px;
     height: 30px;
     margin-right: 10px;
-    content: "";
 }
