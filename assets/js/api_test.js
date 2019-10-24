@@ -7,6 +7,7 @@ app.appendChild(container)
 
 var request = new XMLHttpRequest()
 request.open('GET', 'https://cors-anywhere.herokuapp.com/http://jservice.io/api/random', true)
+request.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
 request.onload = function() {
   // Begin accessing JSON data here
   var data = JSON.parse(this.response)
@@ -17,7 +18,7 @@ request.onload = function() {
       const qcard = document.createElement('div')
       qcard.setAttribute('class', 'qcard')
 
-      const h1 = document.createElement('h1')
+      const h1 = document.createElement('h4')
       h1.textContent = jq.question
 
       const p = document.createElement('p')
