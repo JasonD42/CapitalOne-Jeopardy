@@ -8,9 +8,11 @@
     background-color: rgb(0, 46, 199);
     border: 1px solid rgb(0, 4, 105);
     color: whitesmoke;
+    border: 1px solid #000000;
+    perspective: 1000px;
 }
 
-img .magic-button {
+.magic-button img {
     display: inline-block;
     width: 30px;
     height: 30px;
