@@ -6,7 +6,7 @@ container.setAttribute('class', 'container')
 app.appendChild(container)
 
 var request = new XMLHttpRequest()
-request.open('GET', 'http://jservice.io/api/random', true)
+request.open('GET', 'https://cors-anywhere.herokuapp.com/http://jservice.io/api/random', true)
 request.onload = function() {
   // Begin accessing JSON data here
   var data = JSON.parse(this.response)
@@ -14,8 +14,8 @@ request.onload = function() {
     data.forEach(jq => {
       console.log(jq.id)
 
-      const card = document.createElement('div')
-      card.setAttribute('class', 'card')
+      const qcard = document.createElement('div')
+      qcard.setAttribute('class', 'qcard')
 
       const h1 = document.createElement('h1')
       h1.textContent = jq.question
@@ -23,9 +23,9 @@ request.onload = function() {
       const p = document.createElement('p')
       p.textContent = jq.answer
 
-      container.appendChild(card)
-      card.appendChild(h1)
-      card.appendChild(p)
+      container.appendChild(qcard)
+      qcard.appendChild(h1)
+      qcard.appendChild(p)
     })
   } else {
     const errorMessage = document.createElement('marquee')
