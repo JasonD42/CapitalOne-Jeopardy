@@ -22,10 +22,63 @@ permalink: /
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <form autocomplete="off" action="/action_page.php">
                     <div class="autocomplete" style="width:300px;">
-                      <input id="myInput" type="text" name="myCountry" placeholder="Country">
+                      <input id="myInput" type="text" name="myCategory" placeholder="Category">
                     </div>
-                    <input type="submit">
-                  </form>
+                    <button onclick="searchQuestions()">Search for Questions</button>
+                    <!--<input type="submit">-->
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--  Display Results  -->
+<section id="main_content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <table>
+                    <thead>
+                      <tr>
+                        <th>Category</th>
+                        <th>Question</th>
+                        <th>Answer</th>
+                        <th>Difficulty</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Chicken</td>
+                        <td>Do they have large talons?</td>
+                        <td>I don't understand a word you just said.</td>
+                        <td>100</td>
+                      </tr>
+                      <tr>
+                        <td>Chicken</td>
+                        <td>Do they have large talons?</td>
+                        <td>I don't understand a word you just said.</td>
+                        <td>200</td>
+                      </tr>
+                      <tr>
+                        <td>Chicken</td>
+                        <td>Do they have large talons?</td>
+                        <td>I don't understand a word you just said.</td>
+                        <td>300</td>
+                      </tr>
+                      <tr>
+                        <td>Chicken</td>
+                        <td>Do they have large talons?</td>
+                        <td>I don't understand a word you just said.</td>
+                        <td>400</td>
+                      </tr>
+                      <tr>
+                        <td>Chicken</td>
+                        <td>Do they have large talons?</td>
+                        <td>I don't understand a word you just said.</td>
+                        <td>500</td>
+                      </tr>
+                    </tbody>
+                  </table>
             </div>
         </div>
     </div>
