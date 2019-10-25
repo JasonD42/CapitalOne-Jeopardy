@@ -17,25 +17,42 @@ permalink: /
 
 <!--  Question Search  --> 
 <section id="main_content">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2 col-md-offset-1">
-                    <randq id="qfinder"></randq>
-                </div>
-                <div class="col-md-2">
-                    <randq id="qfinder"></randq>
-                </div>
-                <div class="col-md-2">
-                    <randq id="qfinder"></randq>
-                </div>
-                <div class="col-md-2">
-                    <div id="qfinder"></div>
-                </div>
-                <div class="col-md-2">
-                    <div id="qfinder"></div>
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <form autocomplete="off" action="/action_page.php">
+                    <div class="autocomplete" style="width:300px;">
+                      <input id="myInput" type="text" name="myCountry" placeholder="Country">
+                    </div>
+                    <input type="submit">
+                  </form>
             </div>
         </div>
-    </section>                 
+    </div>
+</section>
+
+
+<!--  Practice Game Board  -->
+<section id="main_content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 col-md-offset-1">
+                <randq></randq>
+            </div>
+            <div class="col-md-2">
+                <randq></randq>
+            </div>
+            <div class="col-md-2">
+                <randq></randq>
+            </div>
+            <div class="col-md-2">
+                <randq></randq>
+            </div>
+            <div class="col-md-2">
+                <randq></randq>
+            </div>
+        </div>
+    </div>
+</section>                 
 
 
