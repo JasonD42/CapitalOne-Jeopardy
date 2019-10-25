@@ -8,7 +8,8 @@ for (let app of elements) {
   app.appendChild(container)
 
   var request = new XMLHttpRequest()
-  request.open('GET', 'https://cors-anywhere.herokuapp.com/http://jservice.io/api/random', true)
+  // cors https://cors-anywhere.herokuapp.com/
+  request.open('GET', 'http://jservice.io/api/random', true)
   request.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
   request.onload = function() {
     // Begin accessing JSON data here

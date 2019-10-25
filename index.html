@@ -19,14 +19,40 @@ permalink: /
 <section id="main_content">
     <div class="container">
         <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <!-- Category Autofill Input -->
                 <form autocomplete="off" action="/action_page.php">
                     <div class="autocomplete" style="width:300px;">
                       <input id="myInput" type="text" name="myCategory" placeholder="Category">
                     </div>
-                    <button onclick="searchQuestions()">Search for Questions</button>
+                    
                     <!--<input type="submit">-->
                 </form>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <!-- Date input -->
+                Start Date: <input type="date" name="start">
+                End Date: <input type="date" name="end">
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <!-- Difficulty input -->
+                <form action="/action_page.php">
+                    <input list="difficulties" name="difficulty">
+                    <datalist id="difficulties">
+                        <option value="100">
+                        <option value="200">
+                        <option value="300">
+                        <option value="400">
+                        <option value="500">
+                    </datalist>
+                </form>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <!-- 4th input? -->
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <!-- Search Button -->
+                <button onclick="searchQuestions()">Search for Questions</button>
             </div>
         </div>
     </div>
@@ -79,6 +105,21 @@ permalink: /
                       </tr>
                     </tbody>
                   </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Test your skills   -->
+<section id="main_content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <br>
+                <br>
+                <h3>Ready to put your skills to the test? Click on a question below to start playing! To see the answer, click on the card again.</h3>
+                <br>
+                <br>
             </div>
         </div>
     </div>
