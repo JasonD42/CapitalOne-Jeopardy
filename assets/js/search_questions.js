@@ -1,5 +1,5 @@
 function getQuestion(category, sDate, eDate, diff) {
-    var qtable = document.getElementById(resultTable);
+    var qtable = document.getElementById('resultTable');
   
     const tableRow = document.createElement('tr')
   
@@ -48,6 +48,8 @@ function searchQuestions() {
     var eDate = document.getElementById('endDateInput').value;
     var diff = document.getElementById('difficultyInput').value;
 
-    getQuestion(category, sDate, eDate, diff);
-
+    for (var i = 0; i < 5; i++) {
+        getQuestion(category, sDate, eDate, diff);
+    }
+    
 }
