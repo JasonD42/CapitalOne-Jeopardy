@@ -26,21 +26,21 @@ permalink: /
                 Select Category<br>
                 <form autocomplete="off" action="/action_page.php">
                     <div class="autocomplete" style="width:300px;">
-                      <input id="myInput" type="text" name="myCategory" placeholder="Category">
+                      <input id="catInput" type="text" name="myCategory" placeholder="Category">
                     </div>
                 </form>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <!-- Date input -->
-                Start Date <input type="date" name="start">
+                Start Date <input id="startDateInput" type="date" name="start">
                 <br>
-                End Date <input type="date" name="end">
+                End Date <input id="endDateInput" type="date" name="end">
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <!-- Difficulty input -->
-                Difficulty<br>
+                Choose Difficulty<br>
                 <form action="/action_page.php">
-                    <input list="difficulties" name="difficulty">
+                    <input id="difficultyInput" list="difficulties" name="difficulty" placeholder="Difficulty">
                     <datalist id="difficulties">
                         <option value="100">
                         <option value="200">
@@ -75,7 +75,7 @@ permalink: /
                         <th>Difficulty</th>
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="resultTable">
                       <tr>
                         <td>Chicken</td>
                         <td>Do they have large talons?</td>
