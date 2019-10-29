@@ -1,9 +1,9 @@
 function getQuestion(category, sDate, eDate, diff) {
-    var old_qtable = document.getElementById('resultTable')
+    var qtable = document.getElementById('resultTable')
+    // Clear old table
+    qtable.innerHTML = ""
 
-    var qtable = document.createElement('tbody')
-    
-
+    // Add parameters to api call
     var params = "?"
     var needAnd = false
     if (category != "") {
@@ -63,7 +63,6 @@ function getQuestion(category, sDate, eDate, diff) {
         errorMessage.textContent = `Gah, it's not working!`
         qtable.appendChild(errorMessage)
       }
-      old_qtable.parentNode.replaceChild(qtable, old_qtable)
     }
     request.send()
   }
