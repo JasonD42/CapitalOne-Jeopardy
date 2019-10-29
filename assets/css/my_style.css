@@ -26,7 +26,7 @@ randq .qcard {
 }
 #main_content input[type=text] {
   background-color: #f1f1f1;
-  width: 100%;
+  /*width: 100%;*/
 }
 #main_content input[type=submit] {
   background-color: DodgerBlue;
@@ -62,9 +62,9 @@ randq .qcard {
 
 #main_content .fixed_header tbody{
   display:block;
-  overflow:auto;
-  height:200px;
-  width:100%;
+  overflow:scroll;
+  height:250px;
+  /*width:100%;*/
 }
 #main_content .fixed_header thead tr{
     display:block;

@@ -4,7 +4,7 @@ function getQuestion(category, sDate, eDate, diff) {
     var params = "?"
     var needAnd = false
     if (category != "") {
-        params = params + "category=" + categories.indexOf(category)
+        params = params + "category=" + (categories.indexOf(category)+1)
         needAnd = true
     }
     if (sDate != "" && eDate != "") {
