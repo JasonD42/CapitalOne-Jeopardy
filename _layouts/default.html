@@ -4,15 +4,16 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ '/assets/css/my_style.css}}">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/my_style.css}}">
+    
 
 {% seo %}
   </head>
   <body>
     <header>
-      <div class="container">
+      <div id="my-style" class="container">
         <div class="magic-button">
           <a href="https://www.youtube.com/watch?v=IzYz0yuefAc"> <img src="./img/buzzer.png" width=30px height=30px></a>&nbsp;<i>Click me!</i>
         </div>
@@ -35,6 +36,6 @@
     <script src="./assets/js/api_test.js"></script>
     <script src="./assets/js/autofill_box.js"></script>
     <script src="./assets/js/search_questions.js"></script>
-    
+
   </body>
 </html>

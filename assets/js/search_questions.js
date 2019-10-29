@@ -1,7 +1,5 @@
 function getQuestion(category, sDate, eDate, diff) {
     var qtable = document.getElementById('resultTable');
-    const tableRow = document.createElement('tr')
-    qtable.appendChild(tableRow)
 
     var params = "?"
     var needAnd = false
@@ -36,6 +34,9 @@ function getQuestion(category, sDate, eDate, diff) {
       console.log(request.status)
       if (request.status >= 200 && request.status < 400) {
         data.forEach(jq => {
+          
+          const tableRow = document.createElement('tr')
+          qtable.appendChild(tableRow)  
   
           const cat = document.createElement('td')
           cat.innerHTML = jq.category["title"]
