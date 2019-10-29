@@ -24,7 +24,7 @@ permalink: /
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <!-- Category Autofill Input -->
                 Select Category<br>
-                <form autocomplete="off" action="/action_page.php">
+                <form autocomplete="off">
                     <div class="autocomplete" style="width:300px;">
                       <input id="categoryInput" type="text" name="myCategory" placeholder="Category">
                     </div>
@@ -39,16 +39,17 @@ permalink: /
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <!-- Difficulty input -->
                 Choose Difficulty<br>
-                <form action="/action_page.php">
-                    <input id="difficultyInput" list="difficulties" name="difficulty" placeholder="Difficulty">
-                    <datalist id="difficulties">
-                        <option value="100">
-                        <option value="200">
-                        <option value="300">
-                        <option value="400">
-                        <option value="500">
-                    </datalist>
-                </form>
+                <input id="difficultyInput" list="difficulties" name="difficulty" placeholder="Difficulty">
+                <datalist id="difficulties">
+                    <option value="100">
+                    <option value="200">
+                    <option value="300">
+                    <option value="400">
+                    <option value="500">
+                    <option value="600">
+                    <option value="800">
+                    <option value="1000">
+                </datalist>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <!-- 4th input? -->
