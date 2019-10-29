@@ -1,6 +1,8 @@
 function getQuestion(category, sDate, eDate, diff) {
-    var qtable = document.getElementById('resultTable');
-    qtable.empty();
+    var old_qtable = document.getElementById('resultTable')
+
+    var qtable = document.createElement('tbody')
+    
 
     var params = "?"
     var needAnd = false
@@ -61,6 +63,7 @@ function getQuestion(category, sDate, eDate, diff) {
         errorMessage.textContent = `Gah, it's not working!`
         qtable.appendChild(errorMessage)
       }
+      old_qtable.parentNode.replaceChild(qtable, old_qtable)
     }
     request.send()
   }

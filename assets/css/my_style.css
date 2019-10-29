@@ -61,22 +61,16 @@ randq .qcard {
   color: #ffffff;
 }
 
-#main_content .fixed_header tbody{
-  display:block;
-  overflow:scroll;
-  max-height:250px;
-  /*width:100%;*/
-}
-#main_content .fixed_header thead tr{
-    display:block;
-}
-
 #my-style .magic-button {
     color: #007bff;
     text-shadow: 0 0 5px rgba(104,182,255,0.5);
 }
 
 #categoryInputautocomplete-list {
-    height: 300px;
+    max-height: 250px;
     overflow: scroll;
+}
+
+#resultTable tr {
+    border: 2px darkblue;
 }
