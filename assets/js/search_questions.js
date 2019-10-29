@@ -1,5 +1,6 @@
 function getQuestion(category, sDate, eDate, diff) {
     var qtable = document.getElementById('resultTable');
+    qtable.empty();
 
     var params = "?"
     var needAnd = false

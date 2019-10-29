@@ -42,6 +42,7 @@ randq .qcard {
   top: 100%;
   left: 0;
   right: 0;
+  color: black;
 }
 #main_content .autocomplete-items div {
   padding: 10px;
@@ -63,7 +64,7 @@ randq .qcard {
 #main_content .fixed_header tbody{
   display:block;
   overflow:scroll;
-  height:250px;
+  max-height:250px;
   /*width:100%;*/
 }
 #main_content .fixed_header thead tr{
