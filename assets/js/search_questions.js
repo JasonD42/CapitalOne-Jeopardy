@@ -1,23 +1,44 @@
 function getQuestion(category, sDate, eDate, diff) {
     var qtable = document.getElementById('resultTable');
-  
     const tableRow = document.createElement('tr')
-  
     qtable.appendChild(tableRow)
+
+    var params = "?"
+    var needAnd = false
+    if (category != "") {
+        params = params + "category=" + categories.indexOf(category)
+        needAnd = true
+    }
+    if (sDate != "" && eDate != "") {
+        if (needAnd) {
+            params = params + "&"
+        }
+        params = params + "min_date=" + sDate + "&max_date=" + eDate
+        needAnd = true
+    }
+    if (diff != "") {
+        if (needAnd) {
+            params = params + "&"
+        }
+        params = params + "value=" + diff
+        needAnd = true
+    }
+
   
     var request = new XMLHttpRequest()
     // cors https://cors-anywhere.herokuapp.com/
-    request.open('GET', 'https://cors-anywhere.herokuapp.com/http://jservice.io/api/random', true)
+    var requestURL = "https://cors-anywhere.herokuapp.com/http://jservice.io/api/clues" + params
+    request.open('GET',  requestURL, true)
     request.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
     request.onload = function () {
-      // Begin accessing JSON data here
+      // Begin accessing JSON data here     
       var data = JSON.parse(this.response)
       console.log(request.status)
       if (request.status >= 200 && request.status < 400) {
         data.forEach(jq => {
   
           const cat = document.createElement('td')
-          cat.innerHTML = jq.category
+          cat.innerHTML = jq.category["title"]
   
           const question = document.createElement('td')
           question.innerHTML = jq.question
@@ -26,7 +47,7 @@ function getQuestion(category, sDate, eDate, diff) {
           answer.innerHTML = jq.answer
 
           const difficulty = document.createElement('td')
-          difficulty.innerHTML = jq.difficulty
+          difficulty.innerHTML = jq.value
   
           tableRow.appendChild(cat)
           tableRow.appendChild(question)
@@ -48,8 +69,6 @@ function searchQuestions() {
     var eDate = document.getElementById('endDateInput').value;
     var diff = document.getElementById('difficultyInput').value;
 
-    for (var i = 0; i < 5; i++) {
-        getQuestion(category, sDate, eDate, diff);
-    }
+    getQuestion(category, sDate, eDate, diff);
     
 }
