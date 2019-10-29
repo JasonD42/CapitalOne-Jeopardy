@@ -1,5 +1,6 @@
 function getRandom(id_tag) {
   var app = document.getElementById(id_tag);
+  app.innerHTML = ""
 
   const container = document.createElement('div')
   container.setAttribute('class', 'container')
