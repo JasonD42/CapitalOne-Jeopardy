@@ -14,12 +14,8 @@
   <body>
     <header>
       <div id="my-style" class="container">
-        <div class="magic-button">
-          <a href="https://www.youtube.com/watch?v=IzYz0yuefAc"> <img src="./img/buzzer.png" width=30px height=30px></a>&nbsp;<i>Click me!</i>
-        </div>
         <h1>{{ site.title | default: site.github.repository_name }}</h1>
         <h2>{{ site.description | default: site.github.project_tagline }}</h2>
-
         <section id="downloads">
           <a href="{{ site.github.repository_url }}" class="btn-github"><span class="icon"></span>View on GitHub</a>
         </section>
@@ -37,5 +33,7 @@
     <script src="./assets/js/autofill_box.js"></script>
     <script src="./assets/js/search_questions.js"></script>
 
+    <!--  Some nice tunes  -->
+    <audio id="think-music" src="./audio/think.mp3" ></audio>
   </body>
 </html>

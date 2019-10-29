@@ -10,6 +10,12 @@ permalink: /
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <h2>Welcome to Jason's Jeopardy Dojo!</h2>
+                <div class="magic-button">
+                    <img src="./img/buzzer.png" width=30px height=30px onclick="getrandom('randq1')"></a>&nbsp;<i>Click for a random question!</i>
+                </div>
+                <br>
+                <randq id="randq1"></randq>
+                <br>
                 <br>
                 <h3>Use the fields below to search through tons of past questions in a plethora of past categories.</h3>
             </div>
@@ -50,7 +56,6 @@ permalink: /
                     <option value="800">
                     <option value="1000">
                 </datalist>
-            </div>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <!-- Search Button -->
@@ -101,21 +106,7 @@ permalink: /
 <section id="main_content">
     <div class="container">
         <div class="row">
-            <div class="col-md-2 col-md-offset-1">
-                <randq id="randq1"></randq>
-            </div>
-            <div class="col-md-2">
-                <randq id="randq2"></randq>
-            </div>
-            <div class="col-md-2">
-                <randq id="randq3"></randq>
-            </div>
-            <div class="col-md-2">
-                <randq id="randq4"></randq>
-            </div>
-            <div class="col-md-2">
-                <randq id="randq5"></randq>
-            </div>
+            
         </div>
     </div>
 </section>                 
