@@ -65,12 +65,12 @@ randq .qcard h4 {
   color: #ffffff;
 }
 
-#my-style .magic-button {
+#main_content .magic-button {
     color: #007bff;
     text-shadow: 0 0 5px rgba(104,182,255,0.5);
 }
 
-#my-style .magic-button img:hover {
+#main_content .magic-button img:hover {
     cursor: pointer;
 }
 
