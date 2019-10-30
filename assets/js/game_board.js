@@ -43,4 +43,4 @@ function makeBoard(id_tag) {
     request.send()
   }
 
-  makeBoard('jboard');
+  makeBoard('jBoard');
