@@ -45,17 +45,17 @@ function makeBoard(id_tag) {
             var jq = data[i]
           }
           // Make flipping card
-          const flipInner = document.createElement('div')
-          flipInner.setAttribute('class', 'card-inner')
-          qDeck.appendChild(flipInner)
           const card = document.createElement('div')
           card.setAttribute('class', 'card')
-          flipInner.appendChild(card)
+          qDeck.appendChild(card)
+          const flipInner = document.createElement('div')
+          flipInner.setAttribute('class', 'card-inner')
+          card.appendChild(flipInner)
           
           // Make front of card
           const cardFront = document.createElement('div')
           cardFront.setAttribute('class', 'card-front')
-          card.appendChild(cardFront)
+          flipInner.appendChild(cardFront)
           const cardBody = document.createElement('div')
           cardBody.setAttribute('class', 'card-body')
           cardFront.appendChild(cardBody)
@@ -68,7 +68,7 @@ function makeBoard(id_tag) {
           // Make back of card
           const cardBack = document.createElement('div')
           cardBack.setAttribute('class', 'card-back')
-          card.appendChild(cardBack)
+          flipInner.appendChild(cardBack)
           const bCardBody = document.createElement('div')
           bCardBody.setAttribute('class', 'card-body')
           cardBack.appendChild(bCardBody)
