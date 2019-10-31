@@ -34,11 +34,12 @@ function makeBoard(id_tag) {
             cardBody.appendChild(cardTitle)
         }
         var qNum = 0
+        var qDeck = -1
         // Create the flipping question cards
         data.forEach(jq => {
           if (qNum++ % numCategories == 0) {
             // Create a deck for holding the board cards
-            var qDeck = document.createElement('div')
+            qDeck = document.createElement('div')
             qDeck.setAttribute('class', 'card-deck')
             board.appendChild(qDeck)
             var jq = data[i]
