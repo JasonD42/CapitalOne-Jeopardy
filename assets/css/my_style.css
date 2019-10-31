@@ -90,7 +90,7 @@ randq .qcard h4 {
 
 #jBoard .card {
   text-align: center;
-  background-color: transparent;
+  /*background-color: transparent;*/
   perspective: 1000px;
 }
 

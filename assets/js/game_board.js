@@ -57,7 +57,7 @@ function makeBoard(id_tag) {
           card.appendChild(cardFront)
           const cardBody = document.createElement('div')
           cardBody.setAttribute('class', 'card-body')
-          carFront.appendChild(cardBody)
+          cardFront.appendChild(cardBody)
           const cardTitle = document.createElement('h2')
           cardTitle.setAttribute('class', 'card-title')
           // Put card's value on the front
