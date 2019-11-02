@@ -89,8 +89,12 @@ header h2 {
 #main_content {
   width: 100%;
   -webkit-font-smoothing: antialiased;
+}
+
+#main_content .row {
   background: rgb(30, 30, 30);
 }
+
 section img {
   max-width: 100%
 }

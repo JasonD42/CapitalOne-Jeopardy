@@ -21,15 +21,15 @@ function getRandom(id_tag) {
         const qcard = document.createElement('div')
         qcard.setAttribute('class', 'qcard')
 
-        const h4 = document.createElement('h4')
-        h4.textContent = jq.question
+        const h3 = document.createElement('h3')
+        h3.textContent = jq.question
 
-        const p = document.createElement('p')
-        p.textContent = jq.answer
+        const h6 = document.createElement('h6')
+        h6.textContent = jq.answer
 
         container.appendChild(qcard)
-        qcard.appendChild(h4)
-        qcard.appendChild(p)
+        qcard.appendChild(h3)
+        qcard.appendChild(h6)
       })
     } else {
       const errorMessage = document.createElement('marquee')

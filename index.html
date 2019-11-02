@@ -17,7 +17,7 @@ permalink: /
                 <randq id="randq1"></randq>
                 <br>
                 <br>
-                <h3>Use the fields below to search through tons of past questions in a plethora of past categories.</h3>
+                <h3>Use the fields below to search through tons of past questions in a plethora of past categories. Filtering by date will only work if you select both a start and end date.</h3>
             </div>
         </div>
     </div>
@@ -37,12 +37,6 @@ permalink: /
                 </form>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
-                <!-- Date input -->
-                Start Date <input id="startDateInput" type="date" name="start">
-                <br>
-                End Date <input id="endDateInput" type="date" name="end">
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
                 <!-- Difficulty input -->
                 Choose Difficulty<br>
                 <input id="difficultyInput" list="difficulties" name="difficulty" placeholder="Difficulty">
@@ -57,9 +51,16 @@ permalink: /
                     <option value="1000">
                 </datalist>
             </div>
+            <!-- Date input -->
             <div class="col-md-3 col-sm-6 col-xs-12">
+                Start Date <input id="startDateInput" type="date" name="start">
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                End Date <input id="endDateInput" type="date" name="end">
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
                 <!-- Search Button -->
-                <button onclick="searchQuestions()">Search for Questions</button>
+                <button id="searchButton" onclick="searchQuestions()">Search for Questions</button>
             </div>
         </div>
     </div>
@@ -86,9 +87,9 @@ permalink: /
     </div>
 </section>
 
-<!-- Test your skills   -->
+<!--  Practice Game Board  -->
 <section id="main_content">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <br>
@@ -96,17 +97,6 @@ permalink: /
                 <h3>Ready to put your skills to the test? Click on a question below to start playing! To see the answer, click on the card again.</h3>
                 <br>
                 <br>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!--  Practice Game Board  -->
-<section id="main_board">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
                 <div id="jBoard">
 
                 </div>

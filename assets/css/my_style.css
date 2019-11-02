@@ -12,8 +12,22 @@ randq .qcard {
     perspective: 1000px;
 }
 
-randq .qcard h4 {
+randq .qcard h3 {
+    margin-top: 10px;
     color: whitesmoke;
+}
+
+randq .qcard h6 {
+    color: whitesmoke;
+    background-color: whitesmoke;
+}
+
+randq .qcard h6:hover {
+  background-color: rgb(0, 0, 150);
+}
+
+#main_content #searchButton {
+  max-width: 25%;
 }
 
 * { box-sizing: border-box; }
@@ -74,27 +88,27 @@ randq .qcard h4 {
     cursor: pointer;
 }
 
-#categoryInputautocomplete-list {
+#main_content #categoryInputautocomplete-list {
     max-height: 250px;
     overflow: scroll;
 }
 
-#resultTable tr {
+#main_content #resultTable tr {
     border: 2px darkblue;
 }
 
-#jBoard {
+#main_content #jBoard {
     margin-left: 20px;
     margin-right: 20px;
     border: 2px black;
 }
 
-#jBoard .card {
+#main_content #jBoard .card {
   background-color: rgb(0, 0, 150);
   color: rgb(230, 210, 39);
 }
 
-#jBoard .card {
+#main_content #jBoard .card {
   text-align: center;
   background-color: transparent;
   perspective: 1000px;
@@ -103,7 +117,7 @@ randq .qcard h4 {
 }
 
 
-#jBoard .card-inner {
+#main_content #jBoard .card-inner {
   /*position: relative;*/
   width: 100%;
   height: 100%;
@@ -112,24 +126,21 @@ randq .qcard h4 {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-#jBoard .card:hover .card-inner {
+#main_content #jBoard .card:hover .card-inner {
   transform: rotateY(180deg);
 }
 
-#jBoard .card-front, .card-back {
-  /*position: absolute;
-  width: 100%;
-  height: 100%;*/
+#main_content #jBoard .card-front, .card-back {
   backface-visibility: hidden;
 }
 
-#jBoard .card-front {
+#main_content #jBoard .card-front {
   background-color: rgb(0, 0, 150);
   height: 20%;
   color: rgb(230, 210, 39);
 }
 
-#jBoard .card-back {
+#main_content #jBoard .card-back {
   background-color: rgb(0, 0, 150);
   height: 80%;
   color: whitesmoke;
