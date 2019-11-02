@@ -1,4 +1,5 @@
 function getQuestion(category, sDate, eDate, diff) {
+    var qNum = document.getElementById('numResults')
     var qtable = document.getElementById('resultTable')
     // Clear old table
     qtable.innerHTML = ""
