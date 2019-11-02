@@ -10,7 +10,7 @@ $blockquote-border: $dove-grey !default;
 body {
   margin: 0;
   padding: 0;
-  background: $body-background url("../images/bkg.png") 0 0 !important;
+  background: -webkit-linear-gradient(-45deg, #252ced 7%,#7f21d1 20%,#c929db 32%,#f2af13 46%,#d3833d 51%,#ad25bc 65%,#2a75d6 83%,#7ed5e8 100%) !important;
   color: $body-foreground !important;
   font-size: 16px !important;
   line-height: 1.5 !important;

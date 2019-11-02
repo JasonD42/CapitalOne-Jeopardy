@@ -16,6 +16,7 @@ function makeBoard(id_tag) {
         // Create a deck for holding the board cards
         const deck = document.createElement('div')
         deck.setAttribute('class', 'card-deck')
+        deck.setAttribute('id', 'category-cards')
         board.appendChild(deck)
         // Setup the 6 category header cards
         for (var i = 0; i < numCategories; i++) {
