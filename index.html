@@ -40,16 +40,17 @@ permalink: /
                 <!-- Difficulty input -->
                 Choose Difficulty<br>
                 <input id="difficultyInput" list="difficulties" name="difficulty" placeholder="Difficulty">
-                <datalist id="difficulties">
-                    <option value="100">
-                    <option value="200">
-                    <option value="300">
-                    <option value="400">
-                    <option value="500">
-                    <option value="600">
-                    <option value="800">
-                    <option value="1000">
-                </datalist>
+                <select>
+                    <option value="" selected disabled hidden>Difficulty</option>
+                    <option value="100"></option>
+                    <option value="200"></option>
+                    <option value="300"></option>
+                    <option value="400"></option>
+                    <option value="500"></option>
+                    <option value="600"></option>
+                    <option value="800"></option>
+                    <option value="1000"></option>
+                </select>
             </div>
             <!-- Date input -->
             <div class="col-md-3 col-sm-6 col-xs-12">
@@ -92,11 +93,13 @@ permalink: /
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
-                <br>
-                <br>
-                <h3>Ready to put your skills to the test? Click on a question below to start playing! To see the answer, click on the card again.</h3>
-                <br>
-                <br>
+                <div class="gameText">
+                    <br>
+                    <br>
+                    <h3>Ready to put your skills to the test? Click on a question below to start playing! To see the answer, click on the card again.</h3>
+                    <br>
+                    <br>  
+                </div>
                 <div id="jBoard">
 
                 </div>
