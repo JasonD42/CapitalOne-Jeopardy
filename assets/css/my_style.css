@@ -5,7 +5,8 @@
 
 randq .qcard {
     position: relative;
-    background-color: rgb(23, 40, 95);
+    background-color: rgb(0, 0, 150);
+    text-align: center;
     color: whitesmoke;
     border: 1px solid #000000;
     perspective: 1000px;
@@ -13,7 +14,6 @@ randq .qcard {
 
 randq .qcard h4 {
     color: whitesmoke;
-
 }
 
 * { box-sizing: border-box; }
@@ -89,7 +89,7 @@ randq .qcard h4 {
     border: 2px black;
 }
 
-#jBoard #category-cards {
+#jBoard .card {
   background-color: rgb(0, 0, 150);
   color: rgb(230, 210, 39);
 }
@@ -129,9 +129,9 @@ randq .qcard h4 {
   color: rgb(230, 210, 39);
 }
 
-.card-back {
+#jBoard .card-back {
   background-color: rgb(0, 0, 150);
   height: 80%;
-  color: white;
+  color: whitesmoke;
   transform: rotateY(180deg);
 }

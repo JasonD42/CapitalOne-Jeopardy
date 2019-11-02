@@ -45,7 +45,7 @@ li {
 */
 
 header {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.5);
   width: 100%;
   border-bottom: 1px dashed $jeopardy-blue; //header;
   padding: 20px 0;
@@ -89,6 +89,7 @@ header h2 {
 #main_content {
   width: 100%;
   -webkit-font-smoothing: antialiased;
+  background: rgb(30, 30, 30);
 }
 section img {
   max-width: 100%
