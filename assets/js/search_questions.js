@@ -65,7 +65,7 @@ function getQuestion(category, sDate, eDate, diff) {
           tableRow.appendChild(difficulty)
         })
         // Display num of questions found
-        const numFound = document.createElement('h4')
+        const numFound = document.createElement('h3')
         if (count > 0) {
           numFound.innerHTML = "Displaying " + count + " results."
         } else {
