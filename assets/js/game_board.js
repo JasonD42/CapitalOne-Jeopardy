@@ -1,4 +1,4 @@
-function addQ(qToAdd, id, first, value) {
+function addQ(board, qToAdd, id, first, value) {
   if (first) {
     const cDeck = document.createElement('div')
     cDeck.setAttribute('class', 'card-deck')
@@ -48,7 +48,7 @@ function addQ(qToAdd, id, first, value) {
   bCardBody.appendChild(bCardAns)
 }
 
-function getCat(cDeck, catID, first) {
+function getCat(board, cDeck, catID, first) {
   //var retData = [];
 
   var request = new XMLHttpRequest()
@@ -84,7 +84,7 @@ function getCat(cDeck, catID, first) {
         var question = data[j];
         //console.log(data[j])
         console.log(question)
-        addQ(question, (catID + j), first, (j+1)*200);
+        addQ(board, question, (catID + j), first, (j+1)*200);
       }
 
     } else {
@@ -113,7 +113,7 @@ function makeBoard(id_tag) {
   var first = true;
   for (var i = 0; i < 6; i++) {
     var catID = (Math.floor(Math.random() * 18419) + 1);
-    getCat(cDeck, catID, first);
+    getCat(board, cDeck, catID, first);
     first = false;
   }
   /*
