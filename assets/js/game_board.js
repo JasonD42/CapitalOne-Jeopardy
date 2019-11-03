@@ -1,4 +1,4 @@
-function getCat(catID) {
+function getCat(cDeck, catID) {
   var retData = []
 
   var request = new XMLHttpRequest()
@@ -11,7 +11,7 @@ function getCat(catID) {
     var data = JSON.parse(this.response)
     console.log(request.status)
     if (request.status >= 200 && request.status < 400) {
-      numCategories++
+      //numCategories++
 
       const card = document.createElement('div')
       card.setAttribute('class', 'card')
@@ -59,7 +59,8 @@ function makeBoard(id_tag) {
   var numCategories = 0
   for (var i = 0; i < 6; i++) {
     var catID = (Math.floor(Math.random() * 18419) + 1)
-    Array.prototype.push.apply(allData, getCat(catID))
+    Array.prototype.push.apply(allData, getCat(cDeck, catID))
+    console.log(allData)
   }
 
   // We have all 30 questions, now just have to organize them by difficulty
