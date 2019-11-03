@@ -100,22 +100,6 @@ randq .qcard mark:hover {
     overflow: scroll;
 }
 
-#main_content .qTable {
-  table-layout: fixed;
-  border-collapse: collapse;
-}
-
-#main_content .qTable tbody {
-  display: block;
-  width: 100%;
-  overflow: scroll;
-  max-height: 250px;
-}
-
-#main_content .qTable thead tr {
-  display: block;
-}
-
 #main_content mark {
   background-color: whitesmoke;
   color: whitesmoke;
