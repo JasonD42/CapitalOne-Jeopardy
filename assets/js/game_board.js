@@ -5,7 +5,7 @@ function addQ(board, qToAdd, id, first, value) {
     cDeck.setAttribute('id', id)
     board.appendChild(cDeck)
   }
-  var time = 10;
+  var time = 200;
   if (first) {
     time = 200;
   }
