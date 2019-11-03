@@ -58,15 +58,15 @@ function makeBoard(id_tag) {
   board.appendChild(cDeck)
 
   // Setting up list/categories of the questions
-  var allData = new Array(30);
+  var allData = [];
   var numCategories = 6
   for (var i = 0; i < 6; i++) {
     var catID = (Math.floor(Math.random() * 18419) + 1)
-    var fiveQs = new Array(5);
-    fiveQs = getCat(cDeck, catID)
+    var fiveQs = [];
+    fiveQs = getCat(cDeck, catID);
     console.log(fiveQs)
     for (var j = 0; j < 5; j++) {
-      allData[j + (i*6)] = fiveQs[j]
+      allData.push(fiveQs[j]);
     }
     console.log(allData)
   }
