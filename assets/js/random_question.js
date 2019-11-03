@@ -22,14 +22,17 @@ function getRandom(id_tag) {
         qcard.setAttribute('class', 'qcard')
 
         const h3 = document.createElement('h3')
-        h3.textContent = jq.question
+        h3.innerHTML = jq.question
 
+        const coverAns = document.createElement('mark')
+        
         const h6 = document.createElement('h6')
-        h6.textContent = jq.answer
+        h6.innerHTML = jq.answer
 
         container.appendChild(qcard)
         qcard.appendChild(h3)
-        qcard.appendChild(h6)
+        qcard.appendChild(coverAns)
+        coverAns.appendChild(h6)
       })
     } else {
       const errorMessage = document.createElement('marquee')
