@@ -59,7 +59,7 @@ function makeBoard(id_tag) {
   var numCategories = 0
   for (var i = 0; i < 6; i++) {
     var catID = (Math.floor(Math.random() * 18419) + 1)
-    Array.prototype.push.apply(allData, getCat(ID))
+    Array.prototype.push.apply(allData, getCat(catID))
   }
 
   // We have all 30 questions, now just have to organize them by difficulty
