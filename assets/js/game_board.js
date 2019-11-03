@@ -30,13 +30,13 @@ function getCat(cDeck, catID) {
       cardBody.appendChild(cardTitle)
 
       // Save 1 question of each difficulty
-      /*for (var j = 0; j < 5; j++) {
+      for (var j = 0; j < 5; j++) {
         var question = data[j];
         //console.log(data[j])
-        //console.log(question)
+        console.log(question)
         retData.push(question);
-      }*/
-      retData = data;
+        console.log(retData[j])
+      }
 
     } else {
       const errorMessage = document.createElement('marquee')
