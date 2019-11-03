@@ -48,7 +48,7 @@ function addQ(board, qToAdd, id, first, value) {
   bCardBody.appendChild(bCardAns)
 }
 
-function getCat(board, cDeck, catID, first) {
+function getCat(board, cDeck, catID, first, firstID) {
   //var retData = [];
 
   var request = new XMLHttpRequest()
@@ -84,7 +84,7 @@ function getCat(board, cDeck, catID, first) {
         var question = data[j];
         //console.log(data[j])
         console.log(question)
-        addQ(board, question, (catID + j), first, (j+1)*200);
+        addQ(board, question, (firstID + j), first, (j+1)*200);
       }
 
     } else {
@@ -111,9 +111,10 @@ function makeBoard(id_tag) {
   //var allData = [];
   //var numCategories = 6;
   var first = true;
+  var firstID = 0;
   for (var i = 0; i < 6; i++) {
     var catID = (Math.floor(Math.random() * 18419) + 1);
-    getCat(board, cDeck, catID, first);
+    getCat(board, cDeck, catID, first, firstID);
     first = false;
   }
   /*
