@@ -66,9 +66,9 @@ function getQuestion(category, sDate, eDate, diff) {
         // Display num of questions found
         const numFound = document.createElement('h4')
         if (count > 0) {
-          h4.innerHTML = "Displaying " + count + " results."
+          numFound.innerHTML = "Displaying " + count + " results."
         } else {
-          h4.innerHTML = "No questions found."
+          numFound.innerHTML = "No questions found."
         }
         qNum.appendChild(numFound)
       } else {
