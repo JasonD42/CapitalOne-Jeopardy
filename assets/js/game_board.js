@@ -1,5 +1,5 @@
 function getCat(cDeck, catID) {
-  var retData = []
+  var retData = new Array(5);
 
   var request = new XMLHttpRequest()
   // cors https://cors-anywhere.herokuapp.com/
@@ -34,7 +34,7 @@ function getCat(cDeck, catID) {
         var question = data[j]
         //console.log(data[j])
         //console.log(question)
-        retData.push(question)
+        retData[j] = question
       }
 
     } else {
@@ -45,7 +45,7 @@ function getCat(cDeck, catID) {
   }
   request.send()
   //console.log(retData)
-  return retData
+  return retData.values();
 }
 
 function makeBoard(id_tag) {
@@ -62,12 +62,12 @@ function makeBoard(id_tag) {
   var numCategories = 6
   for (var i = 0; i < 6; i++) {
     var catID = (Math.floor(Math.random() * 18419) + 1)
-    var fiveQs = [];
-    fiveQs = getCat(cDeck, catID);
+    var fiveQs = getCat(cDeck, catID);
     console.log(fiveQs)
-    for (var j = 0; j < 5; j++) {
-      allData.push(fiveQs[j]);
-    }
+    for (let q of fiveQs) { 
+      console.log(q);
+      allData.push(q); 
+    } 
     console.log(allData)
   }
 
