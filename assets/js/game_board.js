@@ -31,7 +31,10 @@ function getCat(cDeck, catID) {
 
       // Save 1 question of each difficulty
       for (var j = 0; j < 5; j++) {
-        retData.push(data[j])
+        var question = data[j]
+        console.log(data[j])
+        console.log(question)
+        retData.push(question)
       }
 
     } else {
@@ -41,7 +44,7 @@ function getCat(cDeck, catID) {
     }
   }
   request.send()
-
+  console.log(retData)
   return retData
 }
 
