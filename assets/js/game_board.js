@@ -5,47 +5,54 @@ function addQ(board, qToAdd, id, first, value) {
     cDeck.setAttribute('id', id)
     board.appendChild(cDeck)
   }
-  var qDeck = document.getElementById(id);
+  var time = 10;
+  if (first) {
+    time = 200;
+  }
 
-  // Make flipping card
-  const card = document.createElement('div')
-  card.setAttribute('class', 'card')
-  qDeck.appendChild(card)
-  const flipInner = document.createElement('div')
-  flipInner.setAttribute('class', 'card-inner')
-  card.appendChild(flipInner)
+  setTimeout(function () {
+    var qDeck = document.getElementById(id);
 
-  // Make front of card
-  const cardFront = document.createElement('div')
-  cardFront.setAttribute('class', 'card-front')
-  flipInner.appendChild(cardFront)
-  const cardBody = document.createElement('div')
-  cardBody.setAttribute('class', 'card-body')
-  cardFront.appendChild(cardBody)
-  const cardTitle = document.createElement('h2')
-  cardTitle.setAttribute('class', 'card-title')
-  // Put card's value on the front
-  cardTitle.innerHTML = "$" + value
-  cardBody.appendChild(cardTitle)
+    // Make flipping card
+    const card = document.createElement('div')
+    card.setAttribute('class', 'card')
+    qDeck.appendChild(card)
+    const flipInner = document.createElement('div')
+    flipInner.setAttribute('class', 'card-inner')
+    card.appendChild(flipInner)
 
-  // Make back of card
-  const cardBack = document.createElement('div')
-  cardBack.setAttribute('class', 'card-back')
-  flipInner.appendChild(cardBack)
-  const bCardBody = document.createElement('div')
-  bCardBody.setAttribute('class', 'card-body')
-  cardBack.appendChild(bCardBody)
-  const bCardTitle = document.createElement('h2')
-  bCardTitle.setAttribute('class', 'card-title')
-  // Put card's question and answer (hidden)
-  bCardTitle.innerHTML = qToAdd.question
-  bCardBody.appendChild(bCardTitle)
+    // Make front of card
+    const cardFront = document.createElement('div')
+    cardFront.setAttribute('class', 'card-front')
+    flipInner.appendChild(cardFront)
+    const cardBody = document.createElement('div')
+    cardBody.setAttribute('class', 'card-body')
+    cardFront.appendChild(cardBody)
+    const cardTitle = document.createElement('h2')
+    cardTitle.setAttribute('class', 'card-title')
+    // Put card's value on the front
+    cardTitle.innerHTML = "$" + value
+    cardBody.appendChild(cardTitle)
 
-  const bCardAns = document.createElement('h5')
-  const bCardAnsCover = document.createElement('mark')
-  bCardAnsCover.innerHTML = qToAdd.answer
-  bCardAns.appendChild(bCardAnsCover)
-  bCardBody.appendChild(bCardAns)
+    // Make back of card
+    const cardBack = document.createElement('div')
+    cardBack.setAttribute('class', 'card-back')
+    flipInner.appendChild(cardBack)
+    const bCardBody = document.createElement('div')
+    bCardBody.setAttribute('class', 'card-body')
+    cardBack.appendChild(bCardBody)
+    const bCardTitle = document.createElement('h2')
+    bCardTitle.setAttribute('class', 'card-title')
+    // Put card's question and answer (hidden)
+    bCardTitle.innerHTML = qToAdd.question
+    bCardBody.appendChild(bCardTitle)
+
+    const bCardAns = document.createElement('h5')
+    const bCardAnsCover = document.createElement('mark')
+    bCardAnsCover.innerHTML = qToAdd.answer
+    bCardAns.appendChild(bCardAnsCover)
+    bCardBody.appendChild(bCardAns)
+  }, time);
 }
 
 function getCat(board, cDeck, catID, first, firstID) {
@@ -84,7 +91,7 @@ function getCat(board, cDeck, catID, first, firstID) {
         var question = data[j];
         //console.log(data[j])
         console.log(question)
-        addQ(board, question, (firstID + j), first, (j+1)*200);
+        addQ(board, question, (firstID + j), first, (j + 1) * 200);
       }
 
     } else {
