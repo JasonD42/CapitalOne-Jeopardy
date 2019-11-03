@@ -58,31 +58,29 @@ function makeBoard(id_tag) {
   board.appendChild(cDeck)
 
   // Setting up list/categories of the questions
-  var allData = []
-  var numCategories = 0
+  var allData = new Array(30);
+  var numCategories = 6
   for (var i = 0; i < 6; i++) {
     var catID = (Math.floor(Math.random() * 18419) + 1)
-    var fiveQs = getCat(cDeck, catID)
+    var fiveQs = new Array(5);
+    fiveQs = getCat(cDeck, catID)
     console.log(fiveQs)
     for (var j = 0; j < 5; j++) {
-      var q = fiveQs[j]
-      allData.push(q)
-      console.log(q)
+      allData[j + (i*6)] = fiveQs[j]
     }
     console.log(allData)
   }
 
   // We have all 30 questions, now just have to organize them by difficulty
   var qNum = 0
-  var qDeck = -1 // Dummy value
+  var qDeck = document.createElement('div')
   // Create the flipping question cards
   allData.forEach(jq => {
-    if (qNum % numCategories == 0) {
+    if (qNum != 0 && qNum % numCategories == 0) {
       // Create a deck for holding the board cards
       qDeck = document.createElement('div')
       qDeck.setAttribute('class', 'card-deck')
       board.appendChild(qDeck)
-      var jq = allData[i]
     }
     // Make flipping card
     const card = document.createElement('div')
