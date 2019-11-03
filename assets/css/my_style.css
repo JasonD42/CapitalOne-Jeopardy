@@ -19,6 +19,7 @@ randq .qcard h3 {
 
 randq .qcard mark {
     background-color: whitesmoke;
+    color: whitesmoke;
 }
 
 randq .qcard h6 {
@@ -27,6 +28,7 @@ randq .qcard h6 {
 
 randq .qcard mark:hover {
   background-color: rgb(0, 0, 150);
+  color: whitesmoke;
 }
 
 * { box-sizing: border-box; }
@@ -112,6 +114,7 @@ randq .qcard mark:hover {
 
 #main_content mark {
   background-color: whitesmoke;
+  color: whitesmoke;
 }
 
 #main_content mark:hover {

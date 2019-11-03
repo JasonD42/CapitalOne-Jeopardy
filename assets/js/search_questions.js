@@ -37,8 +37,10 @@ function getQuestion(category, sDate, eDate, diff) {
       var data = JSON.parse(this.response)
       console.log(request.status)
       if (request.status >= 200 && request.status < 400) {
+        var count = 0 
         data.forEach(jq => {
-          
+          count = count + 1
+
           const tableRow = document.createElement('tr')
           qtable.appendChild(tableRow)  
   
@@ -61,6 +63,14 @@ function getQuestion(category, sDate, eDate, diff) {
           tableRow.appendChild(answer)
           tableRow.appendChild(difficulty)
         })
+        // Display num of questions found
+        const numFound = document.createElement('h4')
+        if (count > 0) {
+          h4.innerHTML = "Displaying " + count + " results."
+        } else {
+          h4.innerHTML = "No questions found."
+        }
+        qNum.appendChild(numFound)
       } else {
         const errorMessage = document.createElement('marquee')
         errorMessage.textContent = `Gah, it's not working!`

@@ -77,6 +77,12 @@ function makeBoard(id_tag) {
           // Put card's question and answer (hidden)
           bCardTitle.innerHTML = jq.question
           bCardBody.appendChild(bCardTitle)
+
+          const bCardAns = document.createElement('h5')
+          const bCardAnsCover = document.createElement('mark')
+          bCardAnsCover.innerHTML = jq.answer
+          bCardAns.appendChild(bCardAnsCover)
+          bCardBody.appendChild(bCardAns)
         });
 
       } else {
