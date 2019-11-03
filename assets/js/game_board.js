@@ -6,9 +6,6 @@ function addQ(board, qToAdd, id, first, value) {
     board.appendChild(cDeck)
   }
   var time = 200;
-  if (first) {
-    time = 200;
-  }
 
   setTimeout(function () {
     var qDeck = document.getElementById(id);
@@ -90,7 +87,7 @@ function getCat(board, cDeck, catID, first, firstID) {
       for (var j = 0; j < 5; j++) {
         var question = data[j];
         //console.log(data[j])
-        console.log(question)
+        //console.log(question)
         addQ(board, question, (firstID + j), first, (j + 1) * 200);
       }
 
@@ -115,70 +112,13 @@ function makeBoard(id_tag) {
   board.appendChild(cDeck)
 
   // Setting up list/categories of the questions
-  //var allData = [];
-  //var numCategories = 6;
+  var numCategories = 6;
   var first = true;
-  var firstID = 0;
-  for (var i = 0; i < 6; i++) {
+  for (var i = 0; i < numCategories; i++) {
     var catID = (Math.floor(Math.random() * 18419) + 1);
-    getCat(board, cDeck, catID, first, firstID);
+    getCat(board, cDeck, catID, first, 0);
     first = false;
   }
-  /*
-  // We have all 30 questions, now just have to organize them by difficulty
-  var qNum = 0
-  var qDeck = document.createElement('div')
-  // Create the flipping question cards
-  allData.forEach(jq => {
-    if (qNum != 0 && qNum % numCategories == 0) {
-      // Create a deck for holding the board cards
-      qDeck = document.createElement('div')
-      qDeck.setAttribute('class', 'card-deck')
-      board.appendChild(qDeck)
-    }
-    // Make flipping card
-    const card = document.createElement('div')
-    card.setAttribute('class', 'card')
-    qDeck.appendChild(card)
-    const flipInner = document.createElement('div')
-    flipInner.setAttribute('class', 'card-inner')
-    card.appendChild(flipInner)
-
-    // Make front of card
-    const cardFront = document.createElement('div')
-    cardFront.setAttribute('class', 'card-front')
-    flipInner.appendChild(cardFront)
-    const cardBody = document.createElement('div')
-    cardBody.setAttribute('class', 'card-body')
-    cardFront.appendChild(cardBody)
-    const cardTitle = document.createElement('h2')
-    cardTitle.setAttribute('class', 'card-title')
-    // Put card's value on the front
-    cardTitle.innerHTML = "$" + (Math.floor((qNum / 6) + 1) * 200)
-    cardBody.appendChild(cardTitle)
-
-    // Make back of card
-    const cardBack = document.createElement('div')
-    cardBack.setAttribute('class', 'card-back')
-    flipInner.appendChild(cardBack)
-    const bCardBody = document.createElement('div')
-    bCardBody.setAttribute('class', 'card-body')
-    cardBack.appendChild(bCardBody)
-    const bCardTitle = document.createElement('h2')
-    bCardTitle.setAttribute('class', 'card-title')
-    // Put card's question and answer (hidden)
-    bCardTitle.innerHTML = jq.question
-    bCardBody.appendChild(bCardTitle)
-
-    const bCardAns = document.createElement('h5')
-    const bCardAnsCover = document.createElement('mark')
-    bCardAnsCover.innerHTML = jq.answer
-    bCardAns.appendChild(bCardAnsCover)
-    bCardBody.appendChild(bCardAns)
-
-    qNum++
-  });
-  */
 }
 
 makeBoard('jBoard');
