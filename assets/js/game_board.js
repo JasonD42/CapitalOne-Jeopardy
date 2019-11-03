@@ -1,7 +1,5 @@
-var List = require("collections/list");
-
 function getCat(cDeck, catID) {
-  var retData = new List();
+  var retData = [];
 
   var request = new XMLHttpRequest()
   // cors https://cors-anywhere.herokuapp.com/
@@ -60,17 +58,20 @@ function makeBoard(id_tag) {
   board.appendChild(cDeck)
 
   // Setting up list/categories of the questions
-  var allData = new List();
+  var allData = [];
   var numCategories = 6
   for (var i = 0; i < 6; i++) {
     var catID = (Math.floor(Math.random() * 18419) + 1)
     var fiveQs = getCat(cDeck, catID);
-    console.log(fiveQs)
-    for (q in fiveQs) { 
+    console.log(fiveQs);
+    fiveQs.forEach(function (entry) {
+      var q = {};
+      q['question'] = entry.question;
+      q['answer'] = entry.answer;
+      allData.push(q);
       console.log(q);
-      allData.push(q); 
-    } 
-    console.log(allData)
+    });
+    console.log(allData);
   }
 
   // We have all 30 questions, now just have to organize them by difficulty
