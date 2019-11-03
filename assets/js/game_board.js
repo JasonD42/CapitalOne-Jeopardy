@@ -1,3 +1,50 @@
+function getCat(catID) {
+  var retData = []
+
+  var request = new XMLHttpRequest()
+  // cors https://cors-anywhere.herokuapp.com/
+  var requestURL = 'https://cors-anywhere.herokuapp.com/http://jservice.io/api/clues?category=' + catID
+  request.open('GET', requestURL, true)
+  request.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+  request.onload = function () {
+    // Begin accessing JSON data here
+    var data = JSON.parse(this.response)
+    console.log(request.status)
+    if (request.status >= 200 && request.status < 400) {
+      numCategories++
+
+      const card = document.createElement('div')
+      card.setAttribute('class', 'card')
+      cDeck.appendChild(card)
+      const catCard = document.createElement('div')
+      catCard.setAttribute('class', 'cat-card')
+      card.appendChild(catCard)
+      const cardBody = document.createElement('div')
+      cardBody.setAttribute('class', 'card-body')
+      catCard.appendChild(cardBody)
+
+      const cardTitle = document.createElement('h2')
+      cardTitle.setAttribute('class', 'card-title')
+      cardTitle.innerHTML = data[0].category["title"]
+
+      cardBody.appendChild(cardTitle)
+
+      // Save 1 question of each difficulty
+      for (var j = 0; j < 5; j++) {
+        retData.push(data[j])
+      }
+
+    } else {
+      const errorMessage = document.createElement('marquee')
+      errorMessage.textContent = `Gah, it's not working!`
+      board.appendChild(errorMessage)
+    }
+  }
+  request.send()
+
+  return retData
+}
+
 function makeBoard(id_tag) {
   var board = document.getElementById(id_tag);
   board.innerHTML = ""
@@ -10,50 +57,9 @@ function makeBoard(id_tag) {
   // Setting up list/categories of the questions
   var allData = []
   var numCategories = 0
-  for (var i = 0; i < 2; i++) {
+  for (var i = 0; i < 6; i++) {
     var catID = (Math.floor(Math.random() * 18419) + 1)
-
-    var request = new XMLHttpRequest()
-    // cors https://cors-anywhere.herokuapp.com/
-    var requestURL = 'https://cors-anywhere.herokuapp.com/http://jservice.io/api/clues?category=' + catID
-    request.open('GET', requestURL, true)
-    request.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-    request.onload = function () {
-      // Begin accessing JSON data here
-      var data = JSON.parse(this.response)
-      console.log(request.status)
-      if (request.status >= 200 && request.status < 400) {
-        numCategories++
-
-        const card = document.createElement('div')
-        card.setAttribute('class', 'card')
-        cDeck.appendChild(card)
-        const catCard = document.createElement('div')
-        catCard.setAttribute('class', 'cat-card')
-        card.appendChild(catCard)
-        const cardBody = document.createElement('div')
-        cardBody.setAttribute('class', 'card-body')
-        catCard.appendChild(cardBody)
-
-        const cardTitle = document.createElement('h2')
-        cardTitle.setAttribute('class', 'card-title')
-        cardTitle.innerHTML = data[0].category["title"]
-
-        cardBody.appendChild(cardTitle)
-
-        // Save 1 question of each difficulty
-        for (var j = 0; j < 5; j++) {
-          allData.push(data[j])
-        }
-
-      } else {
-        const errorMessage = document.createElement('marquee')
-        errorMessage.textContent = `Gah, it's not working!`
-        board.appendChild(errorMessage)
-      }
-    }
-    request.send()
-
+    Array.prototype.push.apply(allData, getCat(ID))
   }
 
   // We have all 30 questions, now just have to organize them by difficulty
