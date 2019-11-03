@@ -26,12 +26,12 @@ function getRandom(id_tag) {
 
         const coverAns = document.createElement('mark')
         coverAns.innerHTML = jq.answer
-        const h4 = document.createElement('h4')
+        const h5 = document.createElement('h5')
 
         container.appendChild(qcard)
         qcard.appendChild(h3)
-        qcard.appendChild(h4)
-        h4.appendChild(coverAns)
+        qcard.appendChild(h5)
+        h5.appendChild(coverAns)
       })
     } else {
       const errorMessage = document.createElement('marquee')

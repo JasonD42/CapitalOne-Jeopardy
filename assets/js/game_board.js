@@ -20,15 +20,16 @@ function makeBoard(id_tag) {
         // Setup the 6 category header cards
         for (var i = 0; i < numCategories; i++) {
             var jq = data[i];
-            const catCard = document.createElement('div')
-            catCard.setAttribute('class', 'cat-card')
-            deck.appendChild(catCard)
+            
             const card = document.createElement('div')
             card.setAttribute('class', 'card')
-            catCard.appendChild(card)
+            deck.appendChild(card)
+            const catCard = document.createElement('div')
+            catCard.setAttribute('class', 'cat-card')
+            card.appendChild(catCard)
             const cardBody = document.createElement('div')
             cardBody.setAttribute('class', 'card-body')
-            card.appendChild(cardBody)
+            catCard.appendChild(cardBody)
 
             const cardTitle = document.createElement('h2')
             cardTitle.setAttribute('class', 'card-title')
@@ -37,7 +38,7 @@ function makeBoard(id_tag) {
             cardBody.appendChild(cardTitle)
         }
         var qNum = 0
-        var qDeck = -1
+        var qDeck = -1 // Dummy value
         // Create the flipping question cards
         data.forEach(jq => {
           if (qNum++ % numCategories == 0) {
