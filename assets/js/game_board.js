@@ -63,6 +63,7 @@ function makeBoard(id_tag) {
   for (var i = 0; i < 6; i++) {
     var catID = (Math.floor(Math.random() * 18419) + 1)
     var fiveQs = getCat(cDeck, catID)
+    console.log(fiveQs)
     fiveQs.forEach(q => {
       allData.push(q)
     });
