@@ -110,6 +110,14 @@ randq .qcard mark:hover {
   border: 2px darkblue;
 }
 
+#main_content mark {
+  background-color: whitesmoke;
+}
+
+#main_content mark:hover {
+  background-color: rgb(30, 30, 30);
+}
+
 #main_content .gameText {
   width: 100%;
   background-color: rgb(30, 30, 30);
@@ -117,7 +125,6 @@ randq .qcard mark:hover {
 
 #main_content .gameText h3 {
   text-align: center;
-  color: 
 }
 
 #main_content #jBoard {
@@ -168,4 +175,8 @@ randq .qcard mark:hover {
   height: 80%;
   color: whitesmoke;
   transform: rotateY(180deg);
+}
+
+.top-margin {
+  margin-top: 15px;
 }

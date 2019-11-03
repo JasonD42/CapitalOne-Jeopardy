@@ -49,7 +49,9 @@ function getQuestion(category, sDate, eDate, diff) {
           question.innerHTML = jq.question
   
           const answer = document.createElement('td')
-          answer.innerHTML = jq.answer
+          const coverAns = document.createElement('mark')
+          coverAns.innerHTML = jq.answer
+          answer.appendChild(coverAns)
 
           const difficulty = document.createElement('td')
           difficulty.innerHTML = jq.value

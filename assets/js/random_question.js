@@ -25,14 +25,13 @@ function getRandom(id_tag) {
         h3.innerHTML = jq.question
 
         const coverAns = document.createElement('mark')
-        
+        coverAns.innerHTML = jq.answer
         const h6 = document.createElement('h6')
-        h6.innerHTML = jq.answer
 
         container.appendChild(qcard)
         qcard.appendChild(h3)
-        qcard.appendChild(coverAns)
-        coverAns.appendChild(h6)
+        qcard.appendChild(h6)
+        h6.appendChild(coverAns)
       })
     } else {
       const errorMessage = document.createElement('marquee')
