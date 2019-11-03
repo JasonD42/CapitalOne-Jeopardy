@@ -10,7 +10,7 @@ function makeBoard(id_tag) {
   // Setting up list/categories of the questions
   var allData = []
   var numCategories = 0
-  for (var i = 0; i < 1; i++) {
+  while (numCategories < 6) {
     var catID = (Math.floor(Math.random() * 18419) + 1)
 
     var request = new XMLHttpRequest()
@@ -43,7 +43,7 @@ function makeBoard(id_tag) {
 
         // Save 1 question of each difficulty
         for (var j = 0; j < 5; j++) {
-          allData.append(data[j])
+          allData.push(data[j])
         }
 
       } else {
