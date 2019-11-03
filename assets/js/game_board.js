@@ -11,7 +11,7 @@ function makeBoard(id_tag) {
   var allData = []
   var numCategories = 0
   for (var i = 0; i < 1; i++) {
-    var catID = Math.floor(Math.random() * 18419) + 1
+    var catID = 5 //Math.floor(Math.random() * 18419) + 1
 
     var request = new XMLHttpRequest()
     // cors https://cors-anywhere.herokuapp.com/
