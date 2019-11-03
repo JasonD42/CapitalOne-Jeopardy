@@ -3,6 +3,7 @@ function getQuestion(category, sDate, eDate, diff) {
     var qtable = document.getElementById('resultTable')
     // Clear old table
     qtable.innerHTML = ""
+    qNum.innerHTML = ""
 
     // Add parameters to api call
     var params = "?"

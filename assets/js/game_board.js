@@ -20,9 +20,12 @@ function makeBoard(id_tag) {
         // Setup the 6 category header cards
         for (var i = 0; i < numCategories; i++) {
             var jq = data[i];
+            const catCard = document.createElement('div')
+            catCard.setAttribute('class', 'cat-card')
+            deck.appendChild(catCard)
             const card = document.createElement('div')
             card.setAttribute('class', 'card')
-            deck.appendChild(card)
+            catCard.appendChild(card)
             const cardBody = document.createElement('div')
             cardBody.setAttribute('class', 'card-body')
             card.appendChild(cardBody)
