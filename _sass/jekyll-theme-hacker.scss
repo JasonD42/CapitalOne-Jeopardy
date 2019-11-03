@@ -187,19 +187,10 @@ code.highlighter-rouge {
 table {
   width: 100%;
   margin: 0 0 20px 0;
-  table-layout: fixed;
-  border-collapse: collapse;
-}
-
-tbody {
   display: block;
   width: 100%;
   overflow: scroll;
   max-height: 300px;
-}
-
-thead tr {
-  display: block;
 }
 
 th {
