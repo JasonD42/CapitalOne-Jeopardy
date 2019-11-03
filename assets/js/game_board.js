@@ -1,5 +1,5 @@
 function getCat(cDeck, catID) {
-  var retData = [];
+  var data = [];
 
   var request = new XMLHttpRequest()
   // cors https://cors-anywhere.herokuapp.com/
@@ -8,7 +8,7 @@ function getCat(cDeck, catID) {
   request.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
   request.onload = function () {
     // Begin accessing JSON data here
-    var data = JSON.parse(this.response)
+    data = JSON.parse(this.response)
     console.log(request.status)
     if (request.status >= 200 && request.status < 400) {
       //numCategories++
@@ -30,12 +30,12 @@ function getCat(cDeck, catID) {
       cardBody.appendChild(cardTitle)
 
       // Save 1 question of each difficulty
-      for (var j = 0; j < 5; j++) {
+      /*for (var j = 0; j < 5; j++) {
         var question = data[j];
         //console.log(data[j])
         //console.log(question)
         retData.push(question);
-      }
+      }*/
 
     } else {
       const errorMessage = document.createElement('marquee')
@@ -44,8 +44,8 @@ function getCat(cDeck, catID) {
     }
   }
   request.send()
-  console.log(retData)
-  return retData;
+  console.log(data)
+  return data;
 }
 
 function makeBoard(id_tag) {
@@ -64,13 +64,15 @@ function makeBoard(id_tag) {
     var catID = (Math.floor(Math.random() * 18419) + 1)
     var fiveQs = getCat(cDeck, catID);
     console.log(fiveQs);
-    fiveQs.forEach(function (entry) {
+    var count = 0
+    while (count < 5) {
       var q = {};
-      q['question'] = entry.question;
-      q['answer'] = entry.answer;
+      q['question'] = fiveQs[count].question;
+      q['answer'] = fiveQs[count].answer;
       allData.push(q);
       console.log(q);
-    });
+      count++;
+    }
     console.log(allData);
   }
 

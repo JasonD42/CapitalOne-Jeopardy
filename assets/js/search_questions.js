@@ -39,6 +39,7 @@ function getQuestion(category, sDate, eDate, diff) {
       console.log(request.status)
       if (request.status >= 200 && request.status < 400) {
         var count = 0 
+        console.log(data);
         data.forEach(jq => {
           count = count + 1
 
