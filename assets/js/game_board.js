@@ -32,8 +32,8 @@ function getCat(cDeck, catID) {
       // Save 1 question of each difficulty
       for (var j = 0; j < 5; j++) {
         var question = data[j]
-        console.log(data[j])
-        console.log(question)
+        //console.log(data[j])
+        //console.log(question)
         retData.push(question)
       }
 
@@ -44,7 +44,7 @@ function getCat(cDeck, catID) {
     }
   }
   request.send()
-  console.log(retData)
+  //console.log(retData)
   return retData
 }
 
@@ -62,7 +62,10 @@ function makeBoard(id_tag) {
   var numCategories = 0
   for (var i = 0; i < 6; i++) {
     var catID = (Math.floor(Math.random() * 18419) + 1)
-    Array.prototype.push.apply(allData, getCat(cDeck, catID))
+    var fiveQs = getCat(cDeck, catID)
+    fiveQs.forEach(q => {
+      allData.push(q)
+    });
     console.log(allData)
   }
 
