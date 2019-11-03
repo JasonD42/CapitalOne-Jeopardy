@@ -1,5 +1,5 @@
 function getCat(cDeck, catID) {
-  var data = [];
+  var retData = [];
 
   var request = new XMLHttpRequest()
   // cors https://cors-anywhere.herokuapp.com/
@@ -8,7 +8,7 @@ function getCat(cDeck, catID) {
   request.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
   request.onload = function () {
     // Begin accessing JSON data here
-    data = JSON.parse(this.response)
+    var data = JSON.parse(this.response)
     console.log(request.status)
     if (request.status >= 200 && request.status < 400) {
       //numCategories++
@@ -36,6 +36,7 @@ function getCat(cDeck, catID) {
         //console.log(question)
         retData.push(question);
       }*/
+      retData = data;
 
     } else {
       const errorMessage = document.createElement('marquee')
@@ -44,8 +45,8 @@ function getCat(cDeck, catID) {
     }
   }
   request.send()
-  console.log(data)
-  return data;
+  console.log(retData)
+  return retData;
 }
 
 function makeBoard(id_tag) {
